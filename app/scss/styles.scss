@@ -11,3 +11,8 @@ $primary-color: red;
         color: blue;
     }
 }
+
+.testing2 {
+    @extend .testing;
+    border: 1px solid green;
+}
