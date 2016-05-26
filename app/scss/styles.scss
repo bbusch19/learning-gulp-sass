@@ -1,3 +1,13 @@
+$primary-color: red;
+
 .testing {
-    width: percentage(5/7);
+    width: percentage(3/7);
+    height: 50px;
+    background: $primary-color;
+    display: flex;
+
+    ul {
+        list-style: none;
+        color: blue;
+    }
 }

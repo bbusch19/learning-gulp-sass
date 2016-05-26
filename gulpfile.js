@@ -6,6 +6,7 @@ clean = require('gulp-clean-css'),
 print = require('gulp-print'),
 order = require('gulp-order'),
 ngAnnotate = require('gulp-ng-annotate'),
+prefix = require('gulp-autoprefixer'),
 browserSync = require('browser-sync').create();
 
 gulp.task('browserSync', function() {
@@ -25,6 +26,7 @@ gulp.task('html', function() {
 gulp.task('sass', function() {
     return gulp.src('app/scss/**/*.scss')
     .pipe(sass())
+    .pipe(prefix())
     .pipe(clean())
     .pipe(concat('min.css'))
     .pipe(gulp.dest('dist/css/'))
